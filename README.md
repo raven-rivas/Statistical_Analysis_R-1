@@ -13,6 +13,8 @@ Load, clean up, and reshape datasets using tidyverse and dplyr in R
 - ANOVA
 - Linear Regression
 - Chi-Squared Test
+
+
 **Visualization by ggplot2**
 
 - Basic line, bar, and scatter plots
@@ -20,6 +22,6 @@ Load, clean up, and reshape datasets using tidyverse and dplyr in R
 
 ### Results:
 
-- [technical report](/R_analysis/MechaCarWriteUp)
+- [Technical report](/R_analysis/MechaCarWriteUp)
 
 - [Rscript](/R_analysis/MechaCarChallenge.R)
