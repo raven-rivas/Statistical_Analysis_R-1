@@ -33,5 +33,8 @@ summarize_sus_coil <- suspension_coil  %>%
 group_summarize_sus_coil <- suspension_coil %>% group_by(Manufacturing_Lot) %>%
   summarise(Mean_PSI = mean(PSI), Median_PSI = median(PSI),Variance_PSI = var(PSI),Stdev_PSI =sd(PSI))
 
+#---------One sample t-test----------
+t.test(suspension_coil$PSI, mu = 1500)
+
 
 

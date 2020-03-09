@@ -12,9 +12,10 @@ Summary:
     No. Because the P-value (2.277e-11) is less than assumed sighnificence level (0.05), we can state that there is sufficient evidence to reject our null hypothesis. We can state that the slope of our linear model is not zero.
     
 3.Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+    
     No. Because the r-squared value is 0.7032, which means there is roughly 70% of all mpg predictions will be correct when using this multiple linear model.
     However the intercept is also statistically significant, it means there are other variables and factors that contribute to the variation in mpg that have not been included in this linear regression model. Additonal dataset need to be collected or observed.
---------------------------------------------------------------------------------------- 
+------------------------------------------------------------------------------------
 Process:
 
 1. Shapiro-Wilk normality test for mpg 
@@ -23,6 +24,7 @@ Output:
       W = 0.98536, p-value = 0.7869
 
 Conlusion: 
+ Because the P-value (0.7869) is greater than presumed significance level (0.05), we do not have sufficient evidence to reject the null hypothesis, which state that mpg is normally distributed.
 
 2. Pearson Correlation Matrix:
 Purpose:
@@ -37,13 +39,14 @@ vehicle.weight    0.09068314    -0.12271790     1.00000000   -0.11307851       0
 spoiler.angle    -0.02083999     0.02577114    -0.11307851    1.00000000      -0.21112057
 ground.clearance  0.32874886    -0.31663112     0.08511338   -0.21112057       1.00000000
 
-Conclusion: The above table shows the correlation coefficient (r) between each variable. 
+Conclusion: 
+  The above table shows the correlation coefficient (r) between each variable. 
 Vehicle.length and mpg are moderate positively correlated, ground.clearance and mpg are weak positively corelated, vehicle.weight roughly no correlated to mpg, and spoiler.angle has no or very weakly negatively correlated to mpg.
 
 
 3. Multiple linear regression Model:
 Purpose:
-        Predict a continuous dependent variable based on more independent variables fitted to the equation of a line.
+  Predict a continuous dependent variable based on more independent variables fitted to the equation of a line.
 
 Output:
   Call:
@@ -69,13 +72,13 @@ Output:
   F-statistic: 26.65 on 4 and 45 DF,  p-value: 2.277e-11
 
 Conclusion:
-  1. By information about each variable's Pr(>|t|) value, the vehicle.length,ground.clearance and intercept are the variables that are statistically unlikely to provide random amounts of variance to the linear model. 
+  1. From the information about each variable's Pr(>|t|) value, the vehicle.length,ground.clearance and intercept are the variables that are statistically unlikely to provide random amounts of variance to the linear model. 
   2. According to the summary output, the r-squared value is 0.7032 with P-value (2.277e-11) is less than assumed sighnificence level (0.05), we can state that there is sufficient evidence to reject our null hypothesis, which means that the slope of our linear model is not zero. 
   3.There is a significant relationship between mpg and vehicle.length as well as ground.clearance. 
   4.There is roughly 70% of all mpg predictions will be correct when using this multiple linear model.
 
  
-------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 
 Part 2 Suspension Coil Summary
 
@@ -102,6 +105,46 @@ Conclusion:
   The summary statistics table of whole data frame shows variance is 62.29356, which is not exceed 100 and meet the reqirement of design specifications.
   However, when we group dataset by three Manufacturing Lot, the variance of the suspension coils in Lot3 is 170.29 greater than 100. 
   
+ 
+----------------------------------------------------------------------------------------------------
+
+Part 3: Suspension Coil T-Test
+
+Output:
+    One Sample t-test
+
+    data:  suspension_coil$PSI
+      t = -1.8931, df = 149, p-value = 0.06028
+    alternative hypothesis: true mean is not equal to 1500
+    95 percent confidence interval:
+    1497.507 1500.053
+    sample estimates:
+    mean of x 
+      1498.78 
+
+Conclusion: 
+
+      Because the P-value (0.06) is greater than presumed significance level (0.05), we do not have sufficient evidence to reject the null hypothesis that there is no statistically different from the mean population results of 1,500 pounds-per-inch.
+
+----------------------------------------------------------------------------------------------------
+
+Part 4: Design Specific Study
   
+  Background:
   
+  There are many important metrics in an automative industry that would affect customer's choice. For example the performance of auto: Miles per gallon (mpg), quater mile second (qsec), housepower (hp), etc. 
+  In addition, car price is one of the most important KPIs for customer. A car with lower price but same performance would be attractive to customerr. 
+  Car's exterior also be an important metric. Different size and color would have different target market and custmer.
+  
+  Question:
+  
+  The proposed question is that Is there any relationship between car price and the total amount of sales.
+  Hypothesis:
+  The null hypothesis (Ho) is that there is no statistical relationship between a car price and the total units of sales.
+  The alternative hypothesis (Ha) is that there is a statistical relationship between car price and the total units of sales.
+  
+  Statistic test:
+  
+  The statistical test will be used is the single linear regression model.
+  The data should be collected from historical sales dataset with 2 continuous variables: sales unit and unit price, both within a same car class.After transforming and cleaning dataset,we will perform both of quantitative test and qualitive test as well as visualization. 
   
