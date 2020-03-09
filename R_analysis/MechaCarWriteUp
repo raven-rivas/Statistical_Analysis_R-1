@@ -9,7 +9,7 @@ Summary:
     
 2.Is the slope of the linear model considered to be zero? Why or why not?
     
-    No. Because the P-value (2.277e-11) is less than assumed sighnificence level (0.05), we can state that there is sufficient evidence to reject our null hypothesis. We can state that the slope of our linear model is not zero.
+    No. Because the P-value (2.277e-11) is less than assumed significance level (0.05), we can state that there is sufficient evidence to reject our null hypothesis. We can state that the slope of our linear model is not zero.
     
 3.Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
     
@@ -23,7 +23,7 @@ Output:
 
       W = 0.98536, p-value = 0.7869
 
-Conlusion: 
+Conclusion: 
  Because the P-value (0.7869) is greater than presumed significance level (0.05), we do not have sufficient evidence to reject the null hypothesis, which state that mpg is normally distributed.
 
 2. Pearson Correlation Matrix:
@@ -73,7 +73,7 @@ Output:
 
 Conclusion:
   1. From the information about each variable's Pr(>|t|) value, the vehicle.length,ground.clearance and intercept are the variables that are statistically unlikely to provide random amounts of variance to the linear model. 
-  2. According to the summary output, the r-squared value is 0.7032 with P-value (2.277e-11) is less than assumed sighnificence level (0.05), we can state that there is sufficient evidence to reject our null hypothesis, which means that the slope of our linear model is not zero. 
+  2. According to the summary output, the r-squared value is 0.7032 with P-value (2.277e-11) is less than assumed significance level (0.05), we can state that there is sufficient evidence to reject our null hypothesis, which means that the slope of our linear model is not zero. 
   3.There is a significant relationship between mpg and vehicle.length as well as ground.clearance. 
   4.There is roughly 70% of all mpg predictions will be correct when using this multiple linear model.
 
@@ -102,7 +102,7 @@ Manufacturing_Lot | Mean_PSI | Median_PSI | Variance_PSI | Stdev_PSI
 
 Conclusion:
   The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per inch. 
-  The summary statistics table of whole data frame shows variance is 62.29356, which is not exceed 100 and meet the reqirement of design specifications.
+  The summary statistics table of whole data frame shows variance is 62.29356, which is not exceed 100 and meet the requirement of design specifications.
   However, when we group dataset by three Manufacturing Lot, the variance of the suspension coils in Lot3 is 170.29 greater than 100. 
   
  
@@ -132,9 +132,9 @@ Part 4: Design Specific Study
   
   Background:
   
-  There are many important metrics in an automative industry that would affect customer's choice. For example the performance of auto: Miles per gallon (mpg), quater mile second (qsec), housepower (hp), etc. 
-  In addition, car price is one of the most important KPIs for customer. A car with lower price but same performance would be attractive to customerr. 
-  Car's exterior also be an important metric. Different size and color would have different target market and custmer.
+  There are many important metrics in an automotive industry that would affect customer's choice. For example the performance of auto: Miles per gallon (mpg), quarter mile second (qsec), hourepower (hp), etc. 
+  In addition, car price is one of the most important KPIs for customer. A car with lower price but same performance would be attractive to customer. 
+  Car's exterior also be an important metric. Different size and color would have different target market and customer.
   
   Question:
   
@@ -146,5 +146,5 @@ Part 4: Design Specific Study
   Statistic test:
   
   The statistical test will be used is the single linear regression model.
-  The data should be collected from historical sales dataset with 2 continuous variables: sales unit and unit price, both within a same car class.After transforming and cleaning dataset,we will perform both of quantitative test and qualitive test as well as visualization. 
+  The data should be collected from historical sales dataset with 2 continuous variables: sales unit and unit price, both within a same car class. After transforming and cleaning dataset, we will perform both of quantitative test and qualitive test as well as visualization. 
   
