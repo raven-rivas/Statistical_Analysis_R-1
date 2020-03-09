@@ -1,0 +1,77 @@
+
+Part One: Multiple Linear Regression Written Analysis
+
+Summary:
+1.Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+    
+    The vehicle.length, ground.clearance and intercept are the variables that are statistically unlikely to provide random amounts of variance to the linear model.
+    
+    
+2.Is the slope of the linear model considered to be zero? Why or why not?
+    
+    No. Because the P-value (2.277e-11) is less than assumed sighnificence level (0.05), we can state that there is sufficient evidence to reject our null hypothesis. We can state that the slope of our linear model is not zero.
+    
+3.Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+    No. Because the r-squared value is 0.7032, which means there is roughly 70% of all mpg predictions will be correct when using this multiple linear model.
+    However the intercept is also statistically significant, it means there are other variables and factors that contribute to the variation in mpg that have not been included in this linear regression model. Additonal dataset need to be collected or observed.
+--------------------------------------------------------------------------------------- 
+Process:
+
+1. Shapiro-Wilk normality test for mpg 
+Output: 
+
+      W = 0.98536, p-value = 0.7869
+
+Conlusion: 
+
+2. Pearson Correlation Matrix:
+Purpose:
+        Identify how strongly or weakly two variables are related by using correlation coefficient (r).
+        
+Output:
+
+                         mpg vehicle.length vehicle.weight spoiler.angle ground.clearance
+mpg               1.00000000     0.60947984     0.09068314   -0.02083999       0.32874886
+vehicle.length    0.60947984     1.00000000    -0.12271790    0.02577114      -0.31663112
+vehicle.weight    0.09068314    -0.12271790     1.00000000   -0.11307851       0.08511338
+spoiler.angle    -0.02083999     0.02577114    -0.11307851    1.00000000      -0.21112057
+ground.clearance  0.32874886    -0.31663112     0.08511338   -0.21112057       1.00000000
+
+Conclusion: The above table shows the correlation coefficient (r) between each variable. 
+Vehicle.length and mpg are moderate positively correlated, ground.clearance and mpg are weak positively corelated, vehicle.weight roughly no correlated to mpg, and spoiler.angle has no or very weakly negatively correlated to mpg.
+
+
+3. Multiple linear regression Model:
+Purpose:
+        Predict a continuous dependent variable based on more independent variables fitted to the equation of a line.
+
+Output:
+  Call:
+  lm(formula = mpg ~ vehicle.length + vehicle.weight + spoiler.angle + 
+    ground.clearance, data = mechaCar_mpg)
+
+  Residuals:
+      Min       1Q   Median       3Q      Max 
+    -21.3395  -4.1155  -0.2094   6.8789  17.2672 
+
+  Coefficients:
+                   Estimate Std. Error t value Pr(>|t|)    
+    (Intercept)      -1.076e+02  1.576e+01  -6.823 1.87e-08 ***
+    vehicle.length    6.240e+00  6.609e-01   9.441 3.05e-12 ***
+    vehicle.weight    1.277e-03  6.948e-04   1.837   0.0728 .  
+    spoiler.angle     8.031e-02  6.656e-02   1.207   0.2339    
+    ground.clearance  3.659e+00  5.394e-01   6.784 2.13e-08 ***
+  ---
+  Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+  Residual standard error: 8.853 on 45 degrees of freedom
+  Multiple R-squared:  0.7032,	Adjusted R-squared:  0.6768 
+  F-statistic: 26.65 on 4 and 45 DF,  p-value: 2.277e-11
+
+Conclusion:
+  1. By information about each variable's Pr(>|t|) value, the vehicle.length,ground.clearance and intercept are the variables that are statistically unlikely to provide random amounts of variance to the linear model. 
+  2. According to the summary output, the r-squared value is 0.7032 with P-value (2.277e-11) is less than assumed sighnificence level (0.05), we can state that there is sufficient evidence to reject our null hypothesis, which means that the slope of our linear model is not zero. 
+  3.There is a significant relationship between mpg and vehicle.length as well as ground.clearance. 
+  4.There is roughly 70% of all mpg predictions will be correct when using this multiple linear model.
+
+ 
